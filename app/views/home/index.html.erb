@@ -1,21 +1,53 @@
-<h1>Informações sobre preços de veículos</h1>
-<h2>Fabricantes: <%= @fabricantes.count %> marcas</h2>
-<hr>
-<ul>
-<% @fabricantes.each do |f| %>
-  <li>
-    <%= f['id'] %> - <%= f['name'] %>
-  </li>
-<% end %>
-</ul>
+<div class="container">
+  <div class="content">
+    <section class="hero">
+      <div class="hero-body">
+        <p class="title">
+          <h1>Informações sobre preços de veículos</h1>
+        </p>
+        <p class="subtitle">
+          <h2>Fabricantes: <%= @fabricantes.count %> marcas</h2>
+        </p>
+      </div>
+    </section>
 
-<hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Cod.</th>
+          <th>Marca</th>
+          <th>Total de veículos</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Cod.</th>
+          <th>Marca</th>
+          <th>Total de veículos</th>     
+        </tr>
+      </tfoot>
+      <tbody>
+      <% @fabricantes.each do |f| %>
+        <tr>
+          <th><%= f['id'] %></th>
+          <td><%= link_to f['name'], '/fabricantes' %></td>
+          <td>2</td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
-<h2>Carros :: <%= @fabricantes[0]['name'] %></h2>
-<ul>
-<% @fabricantes[0]['cars'].each do |c| %>
-  <li>
-  <%= @fabricantes[0]['name'] %> <%= c['name'] %> - Preço: R$ <%= c['price'] %>
-  </li>
-<% end %>
-</ul>
+    <h2>Carros :: <%= @fabricantes[0]['name'] %></h2>
+    <ul>
+    <% @fabricantes[0]['cars'].each do |c| %>
+      <li>
+      <%= @fabricantes[0]['name'] %> <%= c['name'] %> - Preço: R$ <%= c['price'] %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</div> 
+  
+  
+
+
