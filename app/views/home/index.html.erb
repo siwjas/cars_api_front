@@ -1,0 +1,21 @@
+<h1>Informações sobre preços de veículos</h1>
+<h2>Fabricantes: <%= @fabricantes.count %> marcas</h2>
+<hr>
+<ul>
+<% @fabricantes.each do |f| %>
+  <li>
+    <%= f['id'] %> - <%= f['name'] %>
+  </li>
+<% end %>
+</ul>
+
+<hr>
+
+<h2>Carros :: <%= @fabricantes[0]['name'] %></h2>
+<ul>
+<% @fabricantes[0]['cars'].each do |c| %>
+  <li>
+  <%= @fabricantes[0]['name'] %> <%= c['name'] %> - Preço: R$ <%= c['price'] %>
+  </li>
+<% end %>
+</ul>
