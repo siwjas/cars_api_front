@@ -1,39 +1,68 @@
 
 <section class="hero">
   <div class="hero-body">
-    <h1 class="title is-1">Informações sobre preços de veículos</h1>
+    <h1 class="title is-1">Trabalho: Desenv. Web II</h1>
     <p class="subtitle">
-      <h2>Fabricantes: <%= @fabricantes.count %> marcas</h2>
+      <h2>Equipe:</h2>
     </p>
+    <p class="subtitle">
+      Wellington Almeida | Matheus Jesus | Marcos Antônio | Jonas | Gustavo Santana
+    </p>
+
+    <p class="subtitle">
+      <h2>Objetivo:</h2>
+    </p>
+
+    <p>
+      Contemplar o plano de curso da disciplina Desenvolvimento de Software para Web II, 
+      apresentando a arquitetura do padrão <strong>MVC</strong>, com um exemplo desenvolvido pela equipe, 
+      utilizando um framework da sua escolha, seguindo os critérios de apresentação, 
+      listados nessas instruções.
+    </p>
+
+    <p class="subtitle">
+      <h2>Critérios para Apresentação:</h2>
+    </p>
+
+    <p>
+      Utilizar recurso em <strong>vídeo produzido pela equipe</strong> com a apresentação do seminário 
+      conforme abaixo:
+    </p>
+
+    <ul>
+      <li>
+        Apresentar um framework para desenvolvimento de software para web, 
+        a escolha da equipe, utilizando um exemplo de implementação da 
+        arquitetura MVC (Model-View-Controller).
+      </li>
+      <li>
+        Explicar como funciona o Model, no exemplo utilizado.
+      </li>
+      <li>
+        Explicar como funciona a View, no exemplo utilizado.
+      </li>
+      <li>
+        Caso não tenha algum framework específico, 
+        recomendo a equipe buscar como referência o Springer Boot/Java.
+      </li>
+      <li>
+        Informar como funciona o desenvolvimento de documentação de uma API no framework escolhido. 
+        Ex: (Spring Boot / Java / swagger). 
+      </li>
+      <li>
+        Informar como funciona o desenvolvimento de segurança de uma API no framework escolhido. 
+        Ex: (Spring Boot / Java / Spring Security) 
+      </li>
+      <li>
+        Não é necessário que os alunos apareçam no vídeo, contudo o material deve ser 
+        apresentado (narrado) por pelo menos, um membro da equipe, não sendo permitido 
+        encaminhar vídeos de canais ou cursos online.
+      </li>
+      <li>
+        O tempo desejável para apresentação do vídeo do seminário é de 30 minutos, 
+        mas podem ultrapassar o tempo caso necessário.
+      </li>
+    </ul>
+    
   </div>
 </section>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Cod.</th>
-      <th>Marca</th>
-      <th>Total de veículos</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <th>Cod.</th>
-      <th>Marca</th>
-      <th>Total de veículos</th>     
-    </tr>
-  </tfoot>
-  <tbody>
-  <% @fabricantes.each do |f| %>
-    <tr>
-      <th><%= f['id'] %></th>
-      <td><%= link_to f['name'], '/fabricantes' %></td>
-      <td><%= f['cars'].length %> veícolos </td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-  
-
-
