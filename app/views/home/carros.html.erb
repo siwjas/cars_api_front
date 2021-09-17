@@ -10,18 +10,18 @@
 <section class='card-group '>
   <% @carros.each do |car| %>
     <div class="card mt-2 mx-1">
-      <header class="card-header">
+      <header class="card-header is-primary">
         <p class="card-header-title">
           <%= car['name'] %>
         </p>
       </header>
       <div class="card-content">
         <div class="content">
-          <p class='subtitle'><%= car['manufacturer']['name'] %></p>
-          <p class='subtitle'>Modelo: <%= car['name'] %> </p>
-          <p class='subtitle'>Ano: <%= car['year'] %> </p>
-          <p class='subtitle'>Câmbio: <%= car['cambio'] %> </p>
-          <p class='subtitle'>Combustível: <%= car['fuel'] %> </p>
+          <p class='subtitle is-6'>Fabricante: <%= car['manufacturer']['name'] %></p>
+          <p class='subtitle is-6'>Modelo: <%= car['name'] %> </p>
+          <p class='subtitle is-6'>Ano: <%= car['year'] %> </p>
+          <p class='subtitle is-6'>Câmbio: <%= car['cambio'] %> </p>
+          <p class='subtitle is-6'>Combustível: <%= car['fuel'] %> </p>
         </div>
       </div>
       <footer class="card-footer px-3">
