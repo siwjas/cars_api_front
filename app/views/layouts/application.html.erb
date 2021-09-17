@@ -13,33 +13,36 @@
   </head>
 
   <body>
-  <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <span style="font-size: 45px; color: #ffcc00;">
-      <i class="fas fa-car"></i>  
-    </span>
-    <div class='brand-text'>CAR Price$</div>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <span style="font-size: 45px; color: #ffcc00;">
+            <i class="fas fa-car"></i>  
+          </span>
+          <%= link_to 'CAR Price$', '/', class: 'brand-text' %>
+          
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <%= link_to 'Home', '/', class: 'navbar-item'%>   
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <%= link_to 'Home', '/', class: 'navbar-item'%>   
 
-      <%= link_to 'Fabricantes', '/fabricantes', class: 'navbar-item'%>
+            <%= link_to 'Fabricantes', '/fabricantes', class: 'navbar-item'%>
 
-      <%= link_to 'Carros', '/carros', class: 'navbar-item'%>
+            <%= link_to 'Carros', '/carros', class: 'navbar-item'%>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="content">
+        <%= yield %>
+      </div>
+
     </div>
-  </div>
-</nav>
-    <div class="content">
-      <%= yield %>
-    </div>
-  </div>
   </body>
 </html>

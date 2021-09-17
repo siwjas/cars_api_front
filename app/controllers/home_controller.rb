@@ -1,23 +1,23 @@
 class HomeController < ApplicationController
-  before_action :set_global_data_service
+  before_action :set_global_data
   
   def index
-    @general = @data_service.index
-    @fabricantes = @data_service.fabricantes
+    @general = @data.index
+    @fabricantes = @data.fabricantes
   end
 
   def fabricantes
-    @fabricantes = @data_service.fabricantes
+    @fabricantes = @data.fabricantes
 
   end
 
   def carros
-    @carros = @data_service.carros
+    @carros = @data.carros
 
   end
 
   private
-  def set_global_data_service
-    @data_service = GlobalData.new
+  def set_global_data
+    @data = GlobalData.new
   end
 end

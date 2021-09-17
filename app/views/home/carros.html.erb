@@ -1,2 +1,35 @@
-<h1>Home#carros</h1>
-<p>Find me in app/views/home/carros.html.erb</p>
+<section class="hero">
+  <div class="hero-body">
+    <h1 class="title is-1">Lista de veícolose e preços</h1>
+    <p class="subtitle">
+      <h2>Veículos cadastrados: <%= @carros.count %> </h2>
+    </p>
+  </div>
+</section>
+
+<section class='card-group '>
+  <% @carros.each do |car| %>
+    <div class="card mt-2 mx-1">
+      <header class="card-header">
+        <p class="card-header-title">
+          <%= car['name'] %>
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p class='subtitle'><%= car['manufacturer']['name'] %></p>
+          <p class='subtitle'>Modelo: <%= car['name'] %> </p>
+          <p class='subtitle'>Ano: <%= car['year'] %> </p>
+          <p class='subtitle'>Câmbio: <%= car['cambio'] %> </p>
+          <p class='subtitle'>Combustível: <%= car['fuel'] %> </p>
+        </div>
+      </div>
+      <footer class="card-footer px-3">
+      <div class='sbtitle is-3 mr-1'>Preço: </div> 
+      <div class='title is-6 px-2 pt-1'>
+        <%= number_to_currency(car['price'], unit: "R$ ", separator: ",", delimiter: ".") %>        
+      </div>
+      </footer>
+    </div>
+  <% end %>
+</section>

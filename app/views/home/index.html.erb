@@ -1,40 +1,38 @@
 
-    <section class="hero">
-      <div class="hero-body">
-        <p class="title">
-          <h1>Informações sobre preços de veículos</h1>
-        </p>
-        <p class="subtitle">
-          <h2>Fabricantes: <%= @fabricantes.count %> marcas</h2>
-        </p>
-      </div>
-    </section>
+<section class="hero">
+  <div class="hero-body">
+    <h1 class="title is-1">Informações sobre preços de veículos</h1>
+    <p class="subtitle">
+      <h2>Fabricantes: <%= @fabricantes.count %> marcas</h2>
+    </p>
+  </div>
+</section>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Cod.</th>
-          <th>Marca</th>
-          <th>Total de veículos</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <th>Cod.</th>
-          <th>Marca</th>
-          <th>Total de veículos</th>     
-        </tr>
-      </tfoot>
-      <tbody>
-      <% @fabricantes.each do |f| %>
-        <tr>
-          <th><%= f['id'] %></th>
-          <td><%= link_to f['name'], '/fabricantes' %></td>
-          <td><%= f['cars'].length %> veícolos </td>
-        </tr>
-      <% end %>
-      </tbody>
-    </table>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Cod.</th>
+      <th>Marca</th>
+      <th>Total de veículos</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Cod.</th>
+      <th>Marca</th>
+      <th>Total de veículos</th>     
+    </tr>
+  </tfoot>
+  <tbody>
+  <% @fabricantes.each do |f| %>
+    <tr>
+      <th><%= f['id'] %></th>
+      <td><%= link_to f['name'], '/fabricantes' %></td>
+      <td><%= f['cars'].length %> veícolos </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
 
   
 

@@ -14,9 +14,19 @@
  *= require_self
  */
 
- .brand-text {
-   padding: 17px 10px;
-    color: #027dad;
-    font-size: 1.5em;
-    font-weight: 900;
+ .card-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ }
+
+ .card {
+   min-width: 350px;
+ }
+
+.brand-text {
+  padding: 17px 10px;
+  color: #0474a0;
+  font-size: 1.5em;
+  font-weight: 900;
 }
