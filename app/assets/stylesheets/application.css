@@ -24,6 +24,10 @@
    min-width: 360px;
  }
 
+ .card .card-header {
+   background-color: #06d6a0;
+ }
+
 .brand-text {
   padding: 17px 10px;
   color: #0474a0;

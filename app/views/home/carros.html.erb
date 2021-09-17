@@ -10,22 +10,29 @@
 <section class='card-group '>
   <% @carros.each do |car| %>
     <div class="card mt-2 mx-1">
-      <header class="card-header is-primary">
+      <header class="card-header">
         <p class="card-header-title">
           <%= car['name'] %>
         </p>
       </header>
+
       <div class="card-content">
         <div class="content">
-          <p class='subtitle is-6'>Fabricante: <%= car['manufacturer']['name'] %></p>
-          <p class='subtitle is-6'>Modelo: <%= car['name'] %> </p>
-          <p class='subtitle is-6'>Ano: <%= car['year'] %> </p>
-          <p class='subtitle is-6'>Câmbio: <%= car['cambio'] %> </p>
-          <p class='subtitle is-6'>Combustível: <%= car['fuel'] %> </p>
+          <div class='sbtitle is-6 mr-1'>
+          <b>Fabricante: </b>
+          <span class='title is-6'>
+            <%= car['manufacturer']['name'] %>        
+          </span>
+          </div> 
+          
+          <p class='subtitle is-6 mt-3'><b>Modelo: </b><%= car['name'] %> </p>
+          <p class='subtitle is-6'><b>Ano: </b><%= car['year'] %> </p>
+          <p class='subtitle is-6'><b>Câmbio: </b><%= car['cambio'] %> </p>
+          <p class='subtitle is-6'><b>Combustível: </b><%= car['fuel'] %> </p>
         </div>
       </div>
-      <footer class="card-footer px-3">
-      <div class='sbtitle is-3 mr-1'>Preço: </div> 
+      <footer class="card-footer px-3 py-2">
+      <div class='sbtitle is-3 mr-1'><b>Preço: </b></div> 
       <div class='title is-6 px-2 pt-1'>
         <%= number_to_currency(car['price'], unit: "R$ ", separator: ",", delimiter: ".") %>        
       </div>
