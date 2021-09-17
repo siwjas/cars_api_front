@@ -9,9 +9,37 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/e4552a3590.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <span style="font-size: 45px; color: #ffcc00;">
+      <i class="fas fa-car"></i>  
+    </span>
+    <div class='brand-text'>CAR Price$</div>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to 'Home', '/', class: 'navbar-item'%>   
+
+      <%= link_to 'Fabricantes', '/fabricantes', class: 'navbar-item'%>
+
+      <%= link_to 'Carros', '/carros', class: 'navbar-item'%>
+    </div>
+  </div>
+</nav>
+    <div class="content">
+      <%= yield %>
+    </div>
+  </div>
   </body>
 </html>

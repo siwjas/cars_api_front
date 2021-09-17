@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ .brand-text {
+   padding: 17px 10px;
+    color: #027dad;
+    font-size: 1.5em;
+    font-weight: 900;
+}
